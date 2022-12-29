@@ -16,6 +16,20 @@ To allow for future changes to our API structure, while making sure we do not br
 | ---       | ---       |
 | 1         | WIP       |
 
+## File formatting
+
+We will be offering multiple formats in the feature. Right now we only support one format.
+When a user requests a file. We will respond with the Content-Type shown below and a Content-Disposition header for attachments.
+
+###### File formats
+
+| Name      | Extension     | Content-Type                                                          |
+| ---       | ---           | ---                                                                   |
+| JSON      | .json         | application/json                                                      |
+| Excel     | .xslx         | application/vnd.openxmlformats-officedocument.spreadsheetml.sheet     |
+
+
+####
 
 ## Snowflakes
 
