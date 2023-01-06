@@ -9,13 +9,13 @@ Represents the time a user worked.
 | Field name            | Type                  | Description                                    |
 | ---                   | ---                   | ---                                            |
 | id                    | snowflake             | The id of this session.                        |
+| user                  | snowflake             | The id of the user this session belongs to.    |
 | shift                 | ?snowflake            | The id of the shift that this corresponds to.  |
-| user                  | ?snowflake            | The id of the user this session belongs to.    |
 | original_start_time   | ISO8601 timestamp     | The time the user clocked in.                  |
 | original_end_time     | ?ISO8601 timestamp    | The time the user clocked out.                 |
 | start_time            | ISO8601 timestamp     | The time the user is clocked in.               |
 | end_time              | ?ISO8601 timestamp    | The time the user is clocked out.              |
-
+| description           | string                | What was done during this session.             |
 
 ###### Example Session
 
@@ -57,16 +57,18 @@ Returns a [file](/docs/Reference.md#file-formatting) according to the specified 
 Returns the newly created session. In case the user currently has a session that has not yet ended, we will send back a 409 Conflict. 
 Returns a [session](/docs/resources/Session.md#session-object) object on success.
 
-## Edit session times % HTTP PATCH /sessions/{[session.id](/docs/resources/Session.md#session-object)}
+## Edit session % HTTP PATCH /sessions/{[session.id](/docs/resources/Session.md#session-object)}
 
-Used to either update the start and end times for a session or to end a session. 
-Can only edit `start_time` and `end_time` when the session has ended. 
+Used to either update the session or to end a session. 
+Can only edit `start_time` and `end_time` when the session has ended.
+If the session already has `original_end_time` set, it cannot be changed anymore.
 Returns a [session](/docs/resources/Session.md#session-object) on success.
 
 ###### JSON Params
 
 | Field                 | Type                  | Description                                    |
 | ---                   | ---                   | ---                                            |
-| original_start_time?  | ISO8601 timestamp     | The time the user clocked in.                  |
+| original_end_time?    | ISO8601 timestamp     | The time the user clocked in.                  |
+| description?          | string                | What was done during the session.              |
 | start_time?           | ISO8601 timestamp     | The time the user is clocked in.               |
 | end_time?             | ?ISO8601 timestamp    | The time the user is clocked out.              |
