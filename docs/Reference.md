@@ -54,3 +54,13 @@ Our epoch is `1669852800000`
 | Timestamp           | 63 to 17 | 47 bits        |  `(snowflake >> 17) + 1669852800000` |
 | Internal machine ID | 16 to 12 | 5 bits         |  `(snowflake & 0x1F000) >> 12`       |
 | Sequence            | 11 to 0  | 12 bits        |  `snowflake & 0xFFF`                 |
+
+## Documentation
+
+###### Descriptors
+| Descriptor                | Description                           |
+| ---                       | ---                                   |
+| ?field                    | Optional field                        |
+| field~                    | Hidden field, only available in code  |
+| type?                     | Nullable type                         |
+| type[]                    | Array of type                         |
