@@ -14,7 +14,7 @@ Represents a user.
 | last_name             | string                | The last name of the user                             |
 | verified              | boolean               | Whether the user has completed email verificiation    |
 | password~             | string                | BCrypt hashed password                                |
-| verification_token~   | string                | Token the user has to send along to verify            |
+| verification_token~   | ?string               | Token the user has to send along to verify            |
 
 
 ## Create new user % HTTP POST /user
