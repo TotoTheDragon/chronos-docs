@@ -14,7 +14,6 @@ Represents a user.
 | last_name             | string                | The last name of the user                             |
 | verified              | boolean               | Whether the user has completed email verification    |
 | password~             | string                | BCrypt hashed password                                |
-| verification_token~   | ?string               | Token the user has to send along to verify            |
 
 
 ## Create new user % HTTP POST /user
@@ -30,7 +29,7 @@ Represents a user.
 
 Returns a [user](/docs/resources/User.md#user-structure) object on success with a 201 status code.
 
-## Verify user % HTTP GET /user/verify/:id/:token
+## Verify user % HTTP GET /user/verify/:token
 
 Verifies the user, then on success redirects them to the homepage.
 
@@ -38,7 +37,6 @@ Verifies the user, then on success redirects them to the homepage.
 
 | Field name            | Type                  | Description                                           |
 | ---                   | ---                   | ---                                                   |
-| id                    | snowflake             | The id of this user                                   |
 | verification_token    | string                | Token the user has to send along to verify            |
 
 ## Get current user % HTTP GET /user
