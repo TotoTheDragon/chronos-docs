@@ -1,0 +1,28 @@
+_id: req_0ced8abe61154d8dbb2e22d3adfca5fc
+type: Request
+parentId: wrk_f271884a50594e8585157bd8fcb39063
+modified: 1674602800484
+created: 1674596562337
+url: "{{ _.base_url }}/session"
+name: start session
+description: ""
+method: POST
+body: {}
+parameters:
+  - id: pair_798f6ab4fb98427088bcb8e8a8a2467f
+    name: ""
+    value: ""
+    description: ""
+headers: []
+authentication:
+  type: bearer
+  prefix: "Development "
+  token: "1"
+metaSortKey: -1674596562337
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

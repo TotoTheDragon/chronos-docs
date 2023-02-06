@@ -1,0 +1,32 @@
+_id: req_1aff607fe3dc46208dd6611d6100e35c
+type: Request
+parentId: wrk_f271884a50594e8585157bd8fcb39063
+modified: 1674603677667
+created: 1674596596673
+url: "{{ _.base_url }}/session/end"
+name: end session
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: "{}"
+parameters:
+  - id: pair_b0cfd4479dec4a339fab5432c6be8982
+    name: ""
+    value: ""
+    description: ""
+headers:
+  - name: Content-Type
+    value: application/json
+authentication:
+  type: bearer
+  prefix: Development
+  token: "1"
+metaSortKey: -1674596596673
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

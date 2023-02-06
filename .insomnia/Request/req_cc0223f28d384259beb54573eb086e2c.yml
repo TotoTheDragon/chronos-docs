@@ -1,0 +1,41 @@
+_id: req_cc0223f28d384259beb54573eb086e2c
+type: Request
+parentId: wrk_f271884a50594e8585157bd8fcb39063
+modified: 1675432044818
+created: 1674233764200
+url: localhost:5000/session/export
+name: Export file
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: "{}"
+parameters:
+  - id: pair_792c104a27e5471599c5e6ac9afce8d6
+    name: before
+    value: "622708395999233"
+    description: ""
+  - id: pair_05240dd802264885abda411a8c42dbcd
+    name: after
+    value: "622085003935745"
+    description: ""
+headers:
+  - id: pair_207aca5a7c224b6fbc9517e5980d681b
+    name: authorization
+    value: "Development "
+    description: ""
+    disabled: true
+  - name: Content-Type
+    value: application/json
+authentication:
+  type: bearer
+  prefix: "Development "
+  token: jwt
+metaSortKey: -1674233764200
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
