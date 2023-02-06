@@ -12,7 +12,7 @@ Represents a user.
 | email                 | string                | The email linked to this user                         |
 | first_name            | string                | The first name of the user                            |
 | last_name             | string                | The last name of the user                             |
-| verified              | boolean               | Whether the user has completed email verificiation    |
+| verified              | boolean               | Whether the user has completed email verification    |
 | password~             | string                | BCrypt hashed password                                |
 | verification_token~   | ?string               | Token the user has to send along to verify            |
 
